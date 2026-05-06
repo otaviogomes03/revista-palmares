@@ -8,22 +8,29 @@
 
 body {
     margin: 0;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background-color: #f0f0f0;
+    font-family: 'Montserrat', sans-serif; 
+    background-color: var(--color-bg-light); /* Agora usa a mesma cor do conteúdo */
     color: var(--color-dark);
 }
 
 .magazine-layout {
     max-width: 1000px;
-    margin: 40px auto;
+    margin: 0 auto; /* Mantém centralizado, mas sem margem superior/inferior se preferir */
     background: var(--color-bg-light);
-    box-shadow: 0 0 40px rgba(0,0,0,0.1);
+    box-shadow: none; /* Remove a sombra que criava a distinção */
 }
 
 .page {
-    padding: 60px;
-    border-bottom: 1px dashed #ccc;
+    padding: 80px 60px; /* Aumentei um pouco o respiro superior/inferior */
     position: relative;
+    /* A linha divisória: sólida, 2px de espessura e na cor escura da revista */
+    border-bottom: 2px solid var(--color-dark); 
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.page:last-of-type {
+    border-bottom: none;
 }
 
 .page-header {
